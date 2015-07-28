@@ -1,0 +1,38 @@
+<application>
+<name>PlayBack</name>
+
+<dependencies>	
+</dependencies>
+
+<module>
+    <name> vFramer</name>
+    <parameters> --frameRate 60 --eventWindow 0.2 --displays "(0 left (AE) 1 right (SURF))"</parameters>
+    <node>localhost</node>
+</module>
+
+<module>
+   <name>yarpview</name>
+   <parameters>--name /viewCh0 --x 000 --y 000 --RefreshTime 16 </parameters>
+   <node>localhost</node>
+</module>
+
+<connection>
+  <from>/aexGrabber/vBottle:o</from>
+  <to>/dataset/test/dayonetest/</to>
+  <protocol>tcp</protocol>
+</connection>
+
+<connection>
+  <from>/thisone:o</from>
+  <to>/vFramerModule/vBottle:i</to>
+  <protocol>tcp</protocol>
+</connection>
+
+<connection>
+  <from>/vFramerModule/left</from>
+  <to>/viewCh0</to>
+  <protocol>tcp</protocol>
+</connection>
+
+
+</application>

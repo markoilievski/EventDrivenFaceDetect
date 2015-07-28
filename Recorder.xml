@@ -1,0 +1,26 @@
+<application>
+<name>Recorder</name>
+
+<dependencies>  
+</dependencies>
+
+<module>
+   <name>aexGrabber</name>
+   <node>pc104</node>
+</module>
+ 
+
+<module>
+    <name> yarpdatadumper </name>
+    <parameters> --name /dataset/test/dayonetest/ </parameters>
+    <node> localhost </node>
+</module>
+
+
+<connection>
+  <from>/aexGrabber/vBottle:o</from>
+  <to>/dataset/test/dayonetest/</to>
+  <protocol>tcp</protocol>
+</connection>
+
+</application>
