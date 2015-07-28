@@ -1,5 +1,5 @@
 #include "Feature.h"
-
+ /*
 Eventpoint::Eventpoint()
 {
 
@@ -216,3 +216,4 @@ int checkerFeatures::countArea(vector Events < Eventpoint >)
 	}
 	return (increase - decrease);
 }
+*/

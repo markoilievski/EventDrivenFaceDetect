@@ -22,11 +22,11 @@
 #include <vector>
  
 
-#define ABS(a) ((a) > (0) ? (a) : (-a))
+//--#define ABS(a) ((a) > (0) ? (a) : (-a))
 
 
 class Eventpoint {
-
+/*
 public:
 	Eventpoint();
 	void loadEvent();
@@ -39,7 +39,7 @@ private:
 	int x, y;
 	int polarity;
 	double timing;
-
+*/
 };
 
 /**
@@ -56,32 +56,32 @@ public:
     /// \param Xlimit is the maximum x value (width)
     /// \param Ylimit is the maximium y value (height)
     ///
-	Feature (int inix, int iniy, int finx, int finy) : ix(inix), iy(inty), dx(finx), dy(finy), threshold(0) = 0, error(0) = 0, parity(0) = true {}
+	//--Feature (int inix, int iniy, int finx, int finy) : ix(inix), iy(inty), dx(finx), dy(finy), threshold(0) = 0, error(0) = 0, parity(0) = true {}
 	///
     /// \brief setLimits sets the maximum possible values of the position of
     /// events that could be drawn (mostly governed by the sensor size).
     /// \param Xlimit is the maximum x value (width)
     /// \param Ylimit is the maximium y value (height)
     ///
-	virtual int countArea(vector Events < Eventpoint >) = 0;
+	//--virtual int countArea(vector Events < Eventpoint >) = 0;
 
 	//setters
-	void setPeramiters(int inix, int iniy, int finx, int finy);
+	//--void setPeramiters(int inix, int iniy, int finx, int finy);
 	
 	//getters
-	int getFeatureIX();
-	int getFeatureIY();
-	int getFeatureDX();
-	int getFeatureDY();
-	long double getFeatureError();
-	long double getFeatureThreshold();
-	int getFeatureParity();
+	//--int getFeatureIX();
+	//--int getFeatureIY();
+	//--int getFeatureDX();
+	//--int getFeatureDY();
+	//--long double getFeatureError();
+	//--long double getFeatureThreshold();
+	//--int getFeatureParity();
 
 private:
-	long double threshold;
-	long double error;
-	bool parity;
-	int ix,iy,dx,dy;
+	//--long double threshold;
+	//--long double error;
+	//--bool parity;
+	//--int ix,iy,dx,dy;
 };
 
 /**
@@ -90,7 +90,7 @@ private:
 class egdeFeatureHor : public Feature {
 
 public:
-	int countArea(vector Events < Eventpoint >);
+	//--int countArea(vector Events < Eventpoint >);
 private:
 
 };
@@ -101,7 +101,7 @@ private:
 class egdeFeatureVer : public Feature {
 
 public:
-	int countArea(vector Events < Eventpoint >);
+	//--int countArea(vector Events < Eventpoint >);
 private:
 
 };
@@ -112,7 +112,7 @@ private:
 class lineFeaturesHor : public Feature {
 
 public:
-	int countArea(vector Events < Eventpoint >);
+	//--int countArea(vector Events < Eventpoint >);
 private:
 
 };
@@ -123,7 +123,7 @@ private:
 class lineFeaturesVer : public Feature {
 
 public:
-	int countArea(vector Events < Eventpoint >);
+	//--int countArea(vector Events < Eventpoint >);
 private:
 
 };
@@ -134,7 +134,7 @@ private:
 class checkerFeaturess : public Feature{
 
 public:
-	int countArea(vector Events < Eventpoint >);
+	//--int countArea(vector Events < Eventpoint >);
 private:
 
 };

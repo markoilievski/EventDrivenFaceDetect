@@ -1,5 +1,5 @@
 #include "Cascade.h"
-
+/*
 Cascade::Cascade(vector<Mat> P, vector<Mat> N, vector <HaarFeatures> F){
 	positive = P;
 	negative = N;
@@ -15,7 +15,7 @@ Cascade::~Cascade(){
 /*For this section I used the following website as reference 
 http://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framewoRrk
 http://stackoverflow.com/questions/5808434/how-does-the-viola-jones-face-detection-method-work
-*/
+
 vector< vector < HaarFeatures> > Cascade::createCascade(double f, double d, double targetF){
 
 	vector<Mat> P = positive;
@@ -119,3 +119,4 @@ void Cascade::decraseThreshold(int ith, double minD) {
 	}
 }
 
+*/
